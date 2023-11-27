@@ -1,0 +1,24 @@
+What is OWASP and what is its primary mission as described in the article?
+OWASP står för Open Web Application Security Projec. Det är en icke-vinstdrivande organisation som jobbar med säkerhet för mjukvara
+och hjälper anvädnare och företag med riktlinjer för att säkra sina webbapplikationer.
+
+Explain the concept of "Injection". Provide an example of how an injection attack could compromise a web application's security.
+Injection är när en användare skickar in skadlig kod eller virus t ex i ett formulär. Den vanligaste sorten av injection är SQL.kod 
+som tränger in i databasen och koden manipulerar databasen eller gör olagligt intrång på data användaren inte har rätt till. Det är därför
+man ska säkra all input-fält med validering och även rensa ut (sanitize) ovälkommen kod.
+
+Explain two strategies to prevent Broken Authentication vulnerabilities.
+En strategi för att förhindra är att ha en tvåstegs-validering vid login, t ex att man måste bekräfta inloggningen via mail eller telefon. 
+En annan säkerhetsstrategi är antal användaren bara har ett visst antal försök att logga in, t ex 5 försök sedan spärras inloggningen en liten period.
+Vissa tjänster varnar även och skickar mail när det upptäcker att en ny enhet eller ny lokalisation försöker logga in.
+
+Describe the potential consequences of Insecure Deserialization in web applications. How can developers protect against such attacks?
+Risken finns att hackare får åtkomst till data och information de inte har rätt till, eller att de förstör data som finns lagrad.
+Man kan implementera typkontroller(type checks) och övervaka all deserialisering/uppackning. Man kan även ha som policy att helt
+förbjuda deserialisering av data från icke-trovärdiga källor. Så helt enkelt bara ta emot filer/packa upp från kända källor som man litar på.
+
+Briefly define Cross-Site Scripting (XSS) as outlined in the article and list two methods suggested in the article to prevent XSS attacks in web applications.
+XSS är när man skickar t ex en länk till en hemsida och på den hemsidan har man inkluderat JavaScript kod som då kommer köras på användarens
+webbläsare/dator. Man tar då emot kod till sin egna enhet som gör intrång eller manipulerar. För att förhindra detta så gäller det att 
+validera och sanitize all input/länkar man tar emot. Man kan även ha frameworks installerade som gör kontroller och har inngybbgt skydd. 
+T ex framework som ReactJS och Ruby on Rails.
